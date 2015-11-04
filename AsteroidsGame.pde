@@ -1,15 +1,57 @@
-//your variable declarations here
+SpaceShip sos;
 public void setup() 
 {
-  //your code here
+  
+  SpaceShip sos = new SpaceShip();
+   
 }
 public void draw() 
 {
-  //your code here
+  background(0);
+  
+  sos.show();
 }
-class SpaceShip //extends Floater  
+class Star 
+{
+  int myX, myY;
+  Star()
+  {
+    myX = (int)(Math.random()*500);
+    myY = (int)(Math.random()*500);
+  }
+  void show()
+  {
+    fill(255);
+    ellipse(myX, myY, 3, 3);
+  }
+}
+class SpaceShip extends Floater  
 {   
-    //your code here
+    public SpaceShip() {x = 0;}
+    public void setX(int x) {myX = x;}
+    public void setY(int y) {myY = y;}
+    public void setCenterX(int x) {myX = x;}
+    public void setCenterY(int y) {myY = y;}
+    public void setDirectionX(double x) {myX = x;}
+    public void setDirectionY(double y) {myY = y;}
+    public void setPointDirection(int degrees) {degrees = 0;}
+    abstract public void corners = 7;
+    xCorners = new int[corners];
+    yCorners = new int[corners];
+    xCorners[0] = -8;
+    yCorners[0] = -8;
+    xCorners[1] = 6;
+    yCorners[1] = -8;
+    xCorners[2] = 2;
+    yCorners[2] = -4;
+    xCorners[3] = 16;
+    yCorners[3] = 0;
+    xCorners[4] = 2;
+    yCorners[4] = 4;
+    xCorners[5] = 6;
+    yCorners[5] = 8;
+    xCorners[6] = -8;
+    yCorners[6] = 8;
 }
 abstract class Floater //Do NOT modify the Floater class! Make changes in the SpaceShip class 
 {   
