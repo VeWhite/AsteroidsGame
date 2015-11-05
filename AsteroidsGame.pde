@@ -10,6 +10,27 @@ public void draw()
   background(0);
   
   sos.show();
+public void keyPressed(72)
+  {
+    getX == (int)(Math.random()*500);
+    getY == (int)(Math.random()*500);
+  }
+public void keyPressed(65)
+{
+  m,llkjljlkjlk
+}
+public void keyPressed(68)
+{
+  hgjh
+}
+public void keyPressed(87)
+{
+  khj
+}
+publiv void keyPressed(83)
+{
+  dffd
+}
 }
 class Star 
 {
