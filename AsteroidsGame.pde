@@ -8,9 +8,9 @@ public void setup()
 public void draw() 
 {
   background(0);
-  
-  sos.show();
   star.show();
+  sos.show();
+  
 public void keyPressed(72)
   {
     getX == (int)(Math.random()*500);
