@@ -10,6 +10,7 @@ public void draw()
   background(0);
   
   sos.show();
+  star.show();
 public void keyPressed(72)
   {
     getX == (int)(Math.random()*500);
@@ -17,19 +18,26 @@ public void keyPressed(72)
   }
 public void keyPressed(65)
 {
-  m,llkjljlkjlk
+  sos.rotate();
+  getPointDirection++;
 }
 public void keyPressed(68)
 {
-  hgjh
+  sos.rotate();
+  getPointDirection--;
 }
 public void keyPressed(87)
 {
-  khj
+  sos.accelerate();
+  getCenterX++;
+  getCenterY++;
 }
 publiv void keyPressed(83)
 {
-  dffd
+  sos.accelerate();
+  getCenterY--;
+  getCenterX--;
+
 }
 }
 class Star 
