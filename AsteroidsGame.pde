@@ -42,11 +42,11 @@ publiv void keyPressed(83)
 }
 class Star 
 {
-  int myX, myY;
+  int starX, starY;
   Star()
   {
-    myX = (int)(Math.random()*500);
-    myY = (int)(Math.random()*500);
+    starX = (int)(Math.random()*500);
+    starY = (int)(Math.random()*500);
   }
   void show()
   {
