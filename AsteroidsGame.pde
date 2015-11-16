@@ -11,34 +11,37 @@ public void draw()
   star.show();
   sos.show();
   
-public void keyPressed(72)
+public void keyTyped()
   {
-    getX == (int)(Math.random()*500);
-    getY == (int)(Math.random()*500);
+    if(key == 'h') //72
+    {
+      setDirectionX(0);
+      setCenterX();
+    }
+    if(key == 'a') //65
+      {
+        sos.rotate();
+        getPointDirection++;
+      }
+      if(key == 'd') //68
+      {
+        sos.rotate();
+        getPointDirection--;
+      }
+      if(key == 'w') //87
+        {
+          sos.accelerate();
+          getCenterX++;
+          getCenterY++;
+        }
+        if(key == 's') //83
+          {
+            sos.accelerate();
+            getCenterY--;
+            getCenterX--;
+          }
   }
-public void keyPressed(65)
-{
-  sos.rotate();
-  getPointDirection++;
-}
-public void keyPressed(68)
-{
-  sos.rotate();
-  getPointDirection--;
-}
-public void keyPressed(87)
-{
-  sos.accelerate();
-  getCenterX++;
-  getCenterY++;
-}
-publiv void keyPressed(83)
-{
-  sos.accelerate();
-  getCenterY--;
-  getCenterX--;
 
-}
 }
 class Star 
 {
