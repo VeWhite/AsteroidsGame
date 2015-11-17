@@ -7,7 +7,7 @@ public void setup()
 }
 public void draw() 
 {
-  background(0);
+  /*background(0);
   star.show();
   sos.show();
   
@@ -40,10 +40,10 @@ public void keyTyped()
             getCenterY--;
             getCenterX--;
           }
-  }
+  }*/
 
 }
-class Star 
+/*class Star 
 {
   int starX, starY;
   Star()
@@ -56,7 +56,7 @@ class Star
     fill(255);
     ellipse(myX, myY, 3, 3);
   }
-}
+}*/
 class SpaceShip extends Floater  
 {   
     public SpaceShip() {x = 0;}
@@ -67,7 +67,9 @@ class SpaceShip extends Floater
     public void setDirectionX(double x) {myX = x;}
     public void setDirectionY(double y) {myY = y;}
     public void setPointDirection(int degrees) {degrees = 0;}
-    abstract public void corners = 7;
+    SpaceShip()
+    {
+    corners = 7;
     xCorners = new int[corners];
     yCorners = new int[corners];
     xCorners[0] = -8;
@@ -84,6 +86,10 @@ class SpaceShip extends Floater
     yCorners[5] = 8;
     xCorners[6] = -8;
     yCorners[6] = 8;
+    myColor = color(255);
+    myCenterX = 230;
+    myCenterY = 230;
+    }
 }
 abstract class Floater //Do NOT modify the Floater class! Make changes in the SpaceShip class 
 {   
