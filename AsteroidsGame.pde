@@ -2,7 +2,7 @@ SpaceShip sos;
 public void setup() 
 {
   
-  SpaceShip sos = new SpaceShip();
+  //SpaceShip sos = new SpaceShip();
    
 }
 public void draw() 
@@ -86,10 +86,23 @@ class SpaceShip extends Floater
     yCorners[5] = 8;
     xCorners[6] = -8;
     yCorners[6] = 8;
+    getX() = x;
+    getY() = y;
     myColor = color(255);
     myCenterX = 230;
     myCenterY = 230;
+    myDirectionX = 0;
+    myDirectionY = 0;
+    myPointDirection = 0;
     }
+}
+class Asteroids extends Floater
+{
+  int rotateSpeed;
+Asteroids()
+  {
+    
+  }
 }
 abstract class Floater //Do NOT modify the Floater class! Make changes in the SpaceShip class 
 {   
