@@ -1,8 +1,10 @@
 SpaceShip sos;
+Asteroids aor;
 public void setup() 
 {
   
   //SpaceShip sos = new SpaceShip();
+  //Asteroids aor = new Asteroids();
    
 }
 public void draw() 
@@ -86,8 +88,7 @@ class SpaceShip extends Floater
     yCorners[5] = 8;
     xCorners[6] = -8;
     yCorners[6] = 8;
-    getX() = x;
-    getY() = y;
+
     myColor = color(255);
     myCenterX = 230;
     myCenterY = 230;
@@ -99,10 +100,43 @@ class SpaceShip extends Floater
 class Asteroids extends Floater
 {
   int rotateSpeed;
+
 Asteroids()
   {
-    
+    corners = 9;
+    int[] xS = {0,2,4,4,2,-2,-4,-4,-2};
+    int[] yS = {5,4,2,-2,-4,-4,-2,2,4};
+    xCorners = xS;
+    yCorners = yS;
+    myColor =  color(199);
+    myCenterX = 
   }
+public void aMove()
+{
+ //change the x and y coordinates by myDirectionX and myDirectionY       
+    myCenterX += myDirectionX;    
+    myCenterY += myDirectionY;     
+
+    //wrap around screen    
+    if(myCenterX >width)
+    {     
+      myCenterX = 0;    
+    }    
+    else if (myCenterX<0)
+    {     
+      myCenterX = width;    
+    }    
+    if(myCenterY >height)
+    {    
+      myCenterY = 0;    
+    }   
+    else if (myCenterY < 0)
+    {     
+      myCenterY = height;    
+    }   
+  }   
+
+}  
 }
 abstract class Floater //Do NOT modify the Floater class! Make changes in the SpaceShip class 
 {   
