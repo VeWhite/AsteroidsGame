@@ -5,15 +5,16 @@ public void setup()
   
   //SpaceShip sos = new SpaceShip();
   //Asteroids aor = new Asteroids();
+  //Bullet bod = new Bullet();
    
 }
 public void draw() 
 {
-  /*background(0);
+  background(0);
   star.show();
   sos.show();
   
-public void keyTyped()
+/*public void keyTyped()
   {
     if(key == 'h') //72
     {
@@ -45,7 +46,7 @@ public void keyTyped()
   }*/
 
 }
-/*class Star 
+class Star 
 {
   int starX, starY;
   Star()
@@ -58,7 +59,7 @@ public void keyTyped()
     fill(255);
     ellipse(myX, myY, 3, 3);
   }
-}*/
+}
 class SpaceShip extends Floater  
 {   
     public SpaceShip() {x = 0;}
@@ -101,7 +102,7 @@ class Asteroids extends Floater
 {
   int rotateSpeed;
 
-Asteroids()
+/*Asteroids()
   {
     corners = 9;
     int[] xS = {0,2,4,4,2,-2,-4,-4,-2};
@@ -111,6 +112,17 @@ Asteroids()
     myColor =  color(199);
     myCenterX = 
   }
+}*/
+class Bullet extends Floater
+Bullet(SpaceShip sos)
+{
+  myCenterX = 230;
+  myCenterY = 230;
+  myPointDirection = 0; 
+  double dRadians = myPointDirection*(Math.PI/180);
+  myDirectionX = 5*Math.cos(dRadians) + 0;
+  myDirectionY = 5*Math.sin(dRadians) + 0;
+}
 public void aMove()
 {
  //change the x and y coordinates by myDirectionX and myDirectionY       
