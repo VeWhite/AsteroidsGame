@@ -1,11 +1,11 @@
 SpaceShip sos;
-Asteroids aor;
+ArrayList <aor> Asteroids;
 public void setup() 
 {
   
-  //SpaceShip sos = new SpaceShip();
-  //Asteroids aor = new Asteroids();
-  //Bullet bod = new Bullet();
+  sos = new SpaceShip();
+  bod = new ArrayList <Bullet>();
+  aor = new ArrayList <Asteroids>();
    
 }
 public void draw() 
@@ -14,6 +14,23 @@ public void draw()
   star.show();
   sos.show();
   
+  for (int i = 0; i < aor.size; i++)
+  {
+    for (int j = 0; j < bullet.size(); i++)
+    {
+      float checkDestrusction = dist(bullets.get(j).getX(), bullets.get(j).getY(), aor.get(i).getX(), aor.get(i).getY());
+      if(checkDestrusction < 25*aor.get(i).getSizeMult())
+      {
+        if(aor.get(i).getSizeMult() > 1)
+        {
+          Asteroids aor1 = new Asteroids(aor.get(i).getX(), aor.get(i).getSizeMult() -1);
+          Asteroids aor2 = new Asteroids(aor.get(i).getY(), aor.get(i).getSizeMult() - 1);
+          aor.add(aor1); 
+          aor.add(aor2);
+        }
+      }
+    }
+  }
 /*public void keyTyped()
   {
     if(key == 'h') //72
@@ -102,7 +119,17 @@ class Asteroids extends Floater
 {
   int rotateSpeed;
 
-/*Asteroids()
+
+
+
+  /*boolean add(Object x);
+  void add(int index, Object element);
+  Object get(int index);
+  Object set(int index, Object x);
+  int size();
+
+
+Asteroids()
   {
     corners = 9;
     int[] xS = {0,2,4,4,2,-2,-4,-4,-2};
